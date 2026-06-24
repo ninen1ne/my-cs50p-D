@@ -1,0 +1,9 @@
+---------- RANDOM ----------
+random module generate randomness from thing called 'seed'
+which maybe can reversed engineer if want to use for security
+purpose use 'secret' module instead. :d
+
+
+---------- STATISTICS ----------
+calculate ค่าสถิติพื้นฐาน(descriptive statistics) for conclude bahavior
+of data.

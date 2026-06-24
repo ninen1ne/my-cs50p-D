@@ -1,0 +1,45 @@
+to handle exception we can handle everything 
+but it hide other bug on code bc we don't really
+know what kind of error we are encounter.
+
+so it's a good practice to specify which error
+we are looking for and prevent it. :D
+
+in try except block python will share the scope
+of variable u declare inside try-except block with
+outer function too :D
+
+note: we can use many except block at once
+ex:
+try:
+    # 1. โหลดข้อมูลจากไฟล์ (ความเสี่ยง: ไฟล์ไม่มีอยู่จริง)
+    with open("results.csv", "r") as file:
+        data = file.read()
+        
+    # 2. แปลงข้อมูลเป็นตัวเลข (ความเสี่ยง: ข้อมูลเป็นตัวหนังสือ แปลงไม่ได้)
+    number = int(data)
+    
+    # 3. คำนวณ (ความเสี่ยง: ตัวหารเป็น 0)
+    result = 100 / number
+    print(result)
+
+except FileNotFoundError:
+    # จะทำงานเมื่อไฟล์ "results.csv" หายไปเท่านั้น
+    print("System Error: The requested CSV file is missing.")
+
+except ValueError:
+    # จะทำงานเมื่อข้อมูลในไฟล์ไม่ใช่ตัวเลขที่แปลงเป็น int ได้
+    print("Data Error: File contains invalid characters, cannot convert to integer.")
+
+except ZeroDivisionError:
+    # จะทำงานเมื่อตัวเลขในไฟล์เป็น 0 เป๊ะๆ
+    print("Math Error: Cannot divide by zero.")
+
+* Order of Except Blocks Matters: การเรียงลำดับบล็อก except หลายอัน ต้องเรียงจาก "เจาะจงมาก (Specific)" ไปหา "เจาะจงน้อย (Generic)" เสมอ เพื่อไม่ให้ไอ้ตัวใหญ่ข้างบนแย่งตะครุบข้อมูลไปก่อน
+-------------
+why we need the else block in try-except
+it's bc we want to minimize the error immagine that
+we try-except ValueError if we success in try block
+then in that block we called another function with 
+maybe can cause another ValueError too the except block
+will be execute and cause confusion to user and usv too.

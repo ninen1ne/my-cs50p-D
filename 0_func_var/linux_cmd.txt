@@ -1,0 +1,17 @@
+ls -> list files, folders in current directory
+
+touch -> create new file ; touch hello.py
+
+mkdir -> create new dir ; mkdir vol1
+
+rm -> remove file ; rm hello.py
+
+rmdir -> remove folder ; rmdir vol1 
+
+cp -> copy file ; cp hello.py hello_clone.py
+
+mv -> change file or folder name ; mv vol1 vol2
+or you can move file to new path location as well
+; if dir: cs50p -> hello.py, 0_func_var -> linux_cmd.txt
+to move hello.py to be inside 0_func_var we use :mv hello.py 0_func_var/hello.py
+to move hello.py up(if it in 0_func_var): mv hello.py ../
