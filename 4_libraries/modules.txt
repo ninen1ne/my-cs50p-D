@@ -7,3 +7,16 @@ purpose use 'secret' module instead. :d
 ---------- STATISTICS ----------
 calculate ค่าสถิติพื้นฐาน(descriptive statistics) for conclude bahavior
 of data.
+
+---------- SYS(System)----------
+docs -> https://docs.python.org/3/library/sys.html
+This module provides access to some variables used or maintained by the interpreter and to functions that interact strongly with the interpreter. It is always available. Unless explicitly noted otherwise, all variables are read-only.
+
+ex: sys.argv is a list of cLine args pass to python script like execute in terminal
+python3 name.py args1 args2 ...
+at index 0 sys.argv contain filename of python prog
+
+
+---------- Third-Party Packages ----------
+you can install other python modules like in pypi.org
+to install python comes with package manager called "pip"
