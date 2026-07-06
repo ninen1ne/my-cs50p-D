@@ -1,0 +1,24 @@
+----- UNIT TEST -----
+    It neceasary to test your code for prevent unintent bahavior it might cause.
+unit test mean break your code to test in seperate function(unit) and test it
+individually.
+    We can use Pytest for this test work we don't have to write load of if try except
+Pytest already did it to us.
+
+กฎเหล็กของ Pytest (Crucial Rules):
+เวลาสร้างไฟล์ทดสอบ ต้องตั้งชื่อไฟล์ขึ้นต้นด้วยคำว่า test_ เสมอ เช่น test_calculator.py
+
+ฟังก์ชันด้านในที่ใช้ทดสอบ ก็ต้องขึ้นต้นด้วยคำว่า test_ เช่น def test_square(): เพื่อให้ระบบของ Pytest มองเห็นและวิ่งเข้ามาจับตรวจงานอัตโนมัติ
+
+syntax to run test: pytest filename.py ; pytest instead of python3
+
+
+----- DUNDER METHOD __name__ -----
+this line -> 
+if __name__ == "__main__":
+    main()
+
+    this if line check if we run this file directly from terminal not when we 
+import it as a library in other files.
+
+    if that is the case line under if cond will run.
