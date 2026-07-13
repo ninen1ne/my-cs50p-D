@@ -6,3 +6,4 @@ def test_positive():
 
 def test_negative():
     assert multi(-2, -2) == 4, "-2 * -2 != 4"
+
